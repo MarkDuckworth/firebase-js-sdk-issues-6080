@@ -1,0 +1,27 @@
+{
+  "name": "6080",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:common": "tsc --project tsconfig.json",
+    "compile:esmodule": "tsc --project tsconfig.esmodule.json",
+    "test:common": "node index.js",
+    "test:esmodule": "node index.mjs",
+    "pretest:common": "npm run compile:common",
+    "pretest:esmodule": "cp index.ts index.mts && npm run compile:esmodule"
+  },
+  "author": "",
+  "license": "ISC",
+  "xdependencies": {
+    "@firebase/rules-unit-testing": "^2.0.2",
+    "firebase": "^9.8.3"
+  },
+  "dependencies": {
+    "@firebase/rules-unit-testing": "^2.0.2",
+    "firebase": "9.6.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  }
+}
